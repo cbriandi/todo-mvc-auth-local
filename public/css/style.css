@@ -747,6 +747,10 @@ video {
   font-weight: 700;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .text-\[\#002D74\] {
   --tw-text-opacity: 1;
   color: rgb(0 45 116 / var(--tw-text-opacity));
@@ -773,8 +777,12 @@ video {
   color: gray;
 }
 
-.not{
-  text-decoration: underline;
+/* .not{
+    text-decoration: underline;
+} */
+
+li:hover {
+  cursor: pointer;
 }
 
 input[type='text'] {

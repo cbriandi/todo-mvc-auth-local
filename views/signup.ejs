@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Todo List | Sign Up</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
         <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-5xl p-5 items-center">
             <div class="md:w-1\ px-8 md:px-16">
             <h2 class="font-bold text-2xl text-[#002D74]">Sign Up</h2>
-            <p class="text-xs mt-4 text-[#002D74]">Enter your information below.</p>
+            <p class="text-xs mt-4 text-[#002D74]">Create an account to track your todos.</p>
             <% if (locals.messages.errors) { %>
                 <% messages.errors.forEach( el => { %>
                     <p class="text-xs mt-4 text-red-600"><%= el.msg %></p>
