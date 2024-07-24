@@ -13,11 +13,12 @@
         <div class="bg-gray-100 flex rounded-2xl shadow-lg max-w-5xl p-5 items-center">
           <div class="md:w-1\ px-8 md:px-16">
             <h1 class="text-2xl text-[#002D74] text-center font-semibold mb-5">Todo List</h1>
-            <h2 class="text-xl text-[#002D74] text-center mb-10"><%= user.userName %> has <%= left %> <%= left > 1 ? 'things' : 'thing' %> left to do.</h2>
+            <h2 class="text-xl text-[#002D74] text-center mb-10"><%= user.userName %> has <%= left %> <%= left !== 1 ? 'things' : 'thing' %> left to do.</h2>
             <ul>
                 <% todos.forEach( el => { %>
                         <li class='todoItem mb-10' data-id='<%=el._id%>'>
-                            <span class='text-xs md:text-lg text-[#002D74] text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                            <span class='text-sm md:text-lg text-[#002D74] text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
+                            <span class='text-xs md:text-base text-[#002D74] font-semibold text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.created.toLocaleDateString() %></span>
                             <button class="del py-1 px-2 text-xs text-white bg-[#ca3037] border rounded-lg"><i class="fa-solid fa-trash-can"></i></button>
                         </li>
                 <% }) %>    
