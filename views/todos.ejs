@@ -18,7 +18,7 @@
                 <% todos.forEach( el => { %>
                         <li class='todoItem mb-10' data-id='<%=el._id%>'>
                             <span class='text-sm md:text-lg text-[#002D74] text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
-                            <span class='text-xs md:text-base text-[#002D74] font-semibold text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.created.toLocaleDateString() %></span>
+                            <span class='text-xs md:text-base text-[#002D74] font-semibold text-center mb-5 mr-1 <%= el.completed === true ? 'completed' : 'not'%>'><%= el.created.toLocaleDateString('en-US', { month: 'numeric', day: 'numeric' }) %></span>
                             <button class="del py-1 px-2 text-xs text-white bg-[#ca3037] border rounded-lg"><i class="fa-solid fa-trash-can"></i></button>
                         </li>
                 <% }) %>    
